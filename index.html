@@ -10,36 +10,38 @@
     <div class="wrapper">
       <div class="img_wrapper"></div>
       <div class="form_wrapper">
-        <p class="form_title">
-          Оставьте свои контакты<br />и мы свяжемся с вами
-        </p>
-        <div class="form_body">
-          <div class="form_fields">
-            <div class="upper_fields">
-              <div class="name_field">
-                <input class="form_input" id="name" placeholder="Имя" />
+        <div class="form">
+          <p class="form_title">
+            Оставьте свои контакты<br />и мы свяжемся с вами
+          </p>
+          <div class="form_body">
+            <div class="form_fields">
+              <div class="upper_fields">
+                <div class="name_field">
+                  <input class="form_input" id="name" placeholder="Имя" />
+                </div>
+                <div class="phone_field">
+                  <input
+                          class="form_input"
+                          type="text"
+                          id="phone"
+                          placeholder="Телефон"
+                  />
+                </div>
               </div>
-              <div class="phone_field">
-                <input
-                  class="form_input"
-                  type="text"
-                  id="phone"
-                  placeholder="Телефон"
-                />
+              <div class="mail_field">
+                <input class="form_input" id="mail" placeholder="Email" />
               </div>
-            </div>
-            <div class="mail_field">
-              <input class="form_input" id="mail" placeholder="Email" />
-            </div>
-            <div class="idea_field">
+              <div class="idea_field">
               <textarea
-                class="idea_input"
-                id="idea"
-                placeholder="Опишите свою идею"
+                      class="idea_input"
+                      id="idea"
+                      placeholder="Опишите свою идею"
               ></textarea>
+              </div>
             </div>
+            <button class="send_button" id="send">Отправить</button>
           </div>
-          <button class="send_button" id="send">Отправить</button>
         </div>
       </div>
     </div>
