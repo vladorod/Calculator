@@ -1,9 +1,8 @@
-import { sendInfo } from "./functions.ts";
+import { sendInfo, getInfo } from "./functions.ts";
 import IMask from "imask";
 
 document.addEventListener("DOMContentLoaded", async function () {
   const nameField = document.querySelector("#name") as Element;
-  const phoneField = document.querySelector("#phone") as Element;
   const mailField = document.querySelector("#mail") as Element;
   const ideaField = document.querySelector("#idea") as Element;
   const buttonSend = document.querySelector("#send") as Element;
@@ -19,6 +18,13 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   // реакция сайта на нажатие кнопки "отправить"
   buttonSend.addEventListener("click", async () => {
-    ideaField.value;
+    const response = getInfo();
+    await sendInfo(
+      nameField.value,
+      mask,
+      mailField.value,
+      ideaField.value,
+      response
+    );
   });
 });
