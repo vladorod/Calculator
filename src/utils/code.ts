@@ -18,13 +18,11 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   // реакция сайта на нажатие кнопки "отправить"
   buttonSend.addEventListener("click", async () => {
-    const response = getInfo();
     await sendInfo(
       nameField.value,
-      mask,
+      mask.value,
       mailField.value,
-      ideaField.value,
-      response
+      ideaField.value
     );
   });
 });

@@ -1,3 +1,7 @@
+html,
+body {
+  height: 100%;
+}
 .wrapper {
   width: 100%;
   height: 100%;
@@ -16,6 +20,8 @@
   background-color: rgba(36, 36, 36, 1);
   margin: auto;
   margin-left: 13%;
+  margin-bottom: 170px;
+  margin-top: 170px;
 }
 .form_title {
   font-size: 30px;
@@ -130,21 +136,18 @@
   justify-content: center;
   margin-right: 1%;
 }
-.img {
-  background-image: url(./public/img/image1255.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-}
 .img_wrapper {
-  height: 100%;
+  background-image: url(./public/img/image1255.png);
+  background-position: center;
+  background-size: 120%;
   width: 50%;
+  background-repeat: no-repeat;
+  /* ;
+  height: 100%;
   overflow: hidden;
   text-align: center;
   vertical-align: middle;
-  align-items: center;
+  align-items: center; */
 }
 .idea_input {
   width: 90%;
@@ -160,4 +163,17 @@
 }
 .idea_input:focus {
   outline-width: 0;
+}
+
+@media not all and (min-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .form_wrapper {
+    width: 100%;
+    margin: 0;
+  }
+  .form_body {
+    width: 100%;
+  }
 }
