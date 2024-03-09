@@ -13,14 +13,20 @@
         <p class="form_title">
           Оставьте свои контакты<br />и мы свяжемся с вами
         </p>
-        <div class="form_body">
+        <form class="form_body" id="formContact">
           <div class="form_fields">
             <div class="upper_fields">
               <div class="name_field">
-                <input class="form_input" id="name" placeholder="Имя" />
+                <input
+                  class="form_input"
+                  required
+                  id="name"
+                  placeholder="Имя"
+                />
               </div>
               <div class="phone_field">
                 <input
+                  required
                   class="form_input"
                   type="text"
                   id="phone"
@@ -29,7 +35,12 @@
               </div>
             </div>
             <div class="mail_field">
-              <input class="form_input" id="mail" placeholder="Email" />
+              <input
+                class="form_input"
+                required
+                id="mail"
+                placeholder="Email"
+              />
             </div>
             <div class="idea_field">
               <textarea
@@ -39,8 +50,10 @@
               ></textarea>
             </div>
           </div>
-          <button class="send_button" id="send">Отправить</button>
-        </div>
+          <button class="send_button" type="submit" id="sendForm">
+            Отправить
+          </button>
+        </form>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>

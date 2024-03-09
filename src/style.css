@@ -1,6 +1,12 @@
 html,
 body {
   height: 100%;
+  background-color: rgba(36, 36, 36, 1);
+}
+input:required {
+  border-width: 2px;
+  border-color: #ff8630;
+  background-color: rgba(249, 248, 247, 1);
 }
 .wrapper {
   font-family: "Raleway", sans-serif;
@@ -145,8 +151,8 @@ body {
 }
 .img_wrapper {
   background-image: url(./public/img/image1255.png);
-  background-position: center;
-  background-size: 120%;
+  background-position: right;
+  background-size: cover;
   width: 50%;
   background-repeat: no-repeat;
   /* ;
@@ -185,6 +191,10 @@ body {
   }
   .form_title {
     width: 100%;
+  }
+  .send_button {
+    width: 98%;
+    margin-right: 2%;
   }
 }
 
