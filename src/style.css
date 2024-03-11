@@ -24,6 +24,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 101px;
 }
 .calc_form_wrapper {
   z-index: 1;
@@ -134,7 +135,7 @@ body {
   color: white;
 }
 .image_wrapper {
-  width: 813px;
+  width: 712px;
   height: 469px;
 }
 .house_image {
@@ -150,59 +151,65 @@ body {
   position: relative;
 }
 .plus_image_square {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   left: 80%;
   top: 12%;
   border-radius: 8px;
   background-image: url(./img/crl.png);
   background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
 }
 .plus_image_roof {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   left: 50%;
   top: 4%;
   border-radius: 8px;
   background-image: url(./img/crl.png);
   background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
 }
 .plus_image_sceleton {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   left: 67%;
   top: 50%;
   border-radius: 8px;
   background-image: url(./img/crl.png);
   background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
 }
 .plus_image_foundation {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   left: 28%;
   top: 75%;
   border-radius: 8px;
   background-image: url(./img/crl.png);
   background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
 }
 .plus_image_log {
-  width: 80px;
-  height: 80px;
-  left: 13%;
-  top: 57%;
+  width: 64px;
+  height: 64px;
+  left: 15%;
+  top: 61%;
   border-radius: 8px;
   background-image: url(./img/crl.png);
   background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .form_wrapper {
     flex-direction: column;
+    gap: 0px;
   }
   .calc_form_wrapper {
     width: auto;
@@ -212,8 +219,37 @@ body {
 @media (max-width: 768px) {
   .form_wrapper {
     flex-direction: column;
+    gap: 0px;
   }
   .calc_form_wrapper {
     width: auto;
+  }
+  .image_wrapper {
+    width: 375px;
+    height: 250px;
+  }
+  .house_image {
+    width: 375px;
+    height: 250px;
+  }
+  .plus_image_foundation {
+    width: 40px;
+    height: 40px;
+  }
+  .plus_image_log {
+    width: 40px;
+    height: 40px;
+  }
+  .plus_image_roof {
+    width: 40px;
+    height: 40px;
+  }
+  .plus_image_sceleton {
+    width: 40px;
+    height: 40px;
+  }
+  .plus_image_square {
+    width: 40px;
+    height: 40px;
   }
 }
