@@ -150,14 +150,24 @@ button {
   display: none;
   background-color: #fafafa;
   width:214px;
-  height: 174px;
   z-index: 2;
   position: absolute;
   bottom: 64px;
-  right: -120%;
+  right: -117%;
   padding: 0;
   box-shadow: 0px 14px 24px rgba(51, 51, 51, 0.12);
-  border-radius: 8px
+  border-radius: 8px;
+}
+.dropdown_menu::before {
+  content: ""; 
+	border: solid transparent;
+	position: absolute;
+ 	top: 100%;
+	left: 50%;
+	border-top-color: #fafafa;
+	border-width: 9px;
+	margin-left: -9px;
+  box-shadow: 0px 14px 24px rgba(51, 51, 51, 0.12);
 }
 li{
   list-style: none;
@@ -184,7 +194,7 @@ background-color: #f9f6f4;
   height: 64px;
   border-radius: 999px;
   border: none;
-  background-image: url(./img/crl.png);
+  background-image: url(./img/crl.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -198,7 +208,7 @@ background-color: #f9f6f4;
   height: 64px;
   border-radius: 999px;
   border: none;
-  background-image: url(./img/crl.png);
+  background-image: url(./img/crl.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -212,7 +222,7 @@ background-color: #f9f6f4;
   height: 64px;
   border-radius: 999px;
   border: none;
-  background-image: url(./img/crl.png);
+  background-image: url(./img/crl.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -226,7 +236,7 @@ background-color: #f9f6f4;
   height: 64px;
   border-radius: 999px;
   border: none;
-  background-image: url(./img/crl.png);
+  background-image: url(./img/crl.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -240,7 +250,7 @@ background-color: #f9f6f4;
   height: 64px;
   border-radius: 999px;
   border: none;
-  background-image: url(./img/crl.png);
+  background-image: url(./img/crl.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
