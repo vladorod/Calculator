@@ -49,7 +49,31 @@ button {
   justify-content: flex-start;
   margin: 2%;
 }
-.bathhouse {
+.calc_form_radio_btn {
+	display: inline-block;
+}
+.calc_form_radio_btn input[type=radio] {
+	display: none;
+}
+.calc_form_radio_btn label {
+  height: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+.calc_form_radio_btn input[type=radio]:checked + label {
+	background-color: rgba(192, 161, 144, 1);
+}
+.calc_form_radio_btn input[type=radio]:disabled + label {
+	background: rgba(226, 212, 204, 1);
+}
+/* .bathhouse {
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 5px;
@@ -66,7 +90,6 @@ button {
   padding-right: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: rgba(192, 161, 144, 1);
   border-radius: 8px;
   display: flex;
   flex-direction: row;
@@ -84,7 +107,7 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
+} */
 .sheet_form {
   display: flex;
   flex-direction: column;
