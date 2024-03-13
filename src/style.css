@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  font-family: "raleway", sans-serif;
 }
 button {
   cursor: pointer;
@@ -73,42 +74,8 @@ button {
 .calc_form_radio_btn input[type=radio]:disabled + label {
 	background: rgba(226, 212, 204, 1);
 }
-/* .bathhouse {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: rgba(226, 212, 204, 1);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.house {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.small {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: rgba(226, 212, 204, 1);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-} */
 .sheet_form {
+  width:70%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -118,8 +85,13 @@ button {
   font-size: 16px;
   line-height: 100%;
   color: rgba(80, 80, 80, 1);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
 }
 .total_form {
+  width:70%;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
@@ -191,6 +163,32 @@ button {
 	border-width: 9px;
 	margin-left: -9px;
   box-shadow: 0px 14px 24px rgba(51, 51, 51, 0.12);
+}
+.dropdown_menu_title{
+  list-style: none;
+  padding-left: 16px;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  padding-right: 12px;
+  background-color: #f9f6f4;
+  margin: 0;
+  border-radius: 8px;
+}
+.dropdown_menu label{
+  list-style: none;
+  padding-left: 16px;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  padding-right: 12px;
+  cursor: pointer;
+}
+.dropdown_menu label:hover{
+  background-color: #f9f6f4;
+}
+.dropdown_menu div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 li{
   list-style: none;
