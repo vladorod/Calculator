@@ -3,6 +3,9 @@ body {
   height: 100%;
   font-family: "raleway", sans-serif;
 }
+a{
+  font-weight:bold;
+}
 button {
   cursor: pointer;
 }
