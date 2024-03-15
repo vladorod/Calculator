@@ -28,9 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     const text = document.querySelector(`label[for="${data}"]`).innerText
                     const value = Number(document.querySelector(`input[id="${data}"]`).value)
                     const element = document.getElementById('sqare_result');
+                    const picture = document.querySelector('.plus_image_square');
                     valueArr[0] = value;
                     if (element) {
                         element.textContent = text;
+                        picture.style.backgroundImage = "url('./public/img/crl+.svg')";
                     } else {
                         console.error('Element with id "sqare_result" not found');
                     }
@@ -42,9 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     const text = document.querySelector(`label[for="${data}"]`).innerText
                     const value = Number(document.querySelector(`input[id="${data}"]`).value)
                     const element = document.getElementById('roof_result');
+                    const picture = document.querySelector('.plus_image_roof');
                     valueArr[1] = value;
                     if (element) {
                         element.textContent = text;
+                        picture.style.backgroundImage = "url('./public/img/crl+.svg')";
                     } else {
                         console.error('Element with id "roof_result" not found');
                     }
@@ -56,9 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     const text = document.querySelector(`label[for="${data}"]`).innerText
                     const value = Number(document.querySelector(`input[id="${data}"]`).value)
                     const element = document.getElementById('sceleton_result');
+                    const picture = document.querySelector('.plus_image_sceleton');
                     valueArr[2] = value;
                     if (element) {
                         element.textContent = text;
+                        picture.style.backgroundImage = "url('./public/img/crl+.svg')";
                     } else {
                         console.error('Element with id "sceleton_result" not found');
                     }
@@ -70,9 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     const text = document.querySelector(`label[for="${data}"]`).innerText
                     const value = Number(document.querySelector(`input[id="${data}"]`).value)
                     const element = document.getElementById('foundation_result');
+                    const picture = document.querySelector('.plus_image_foundation');
                     valueArr[3] = value;
                     if (element) {
                         element.textContent = text;
+                        picture.style.backgroundImage = "url('./public/img/crl+.svg')";
                     } else {
                         console.error('Element with id "foundation_result" not found');
                     }
@@ -84,9 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     const text = document.querySelector(`label[for="${data}"]`).innerText
                     const value = Number(document.querySelector(`input[id="${data}"]`).value)
                     const element = document.getElementById('log_result');
+                    const picture = document.querySelector('.plus_image_log');
                     valueArr[4] = value;
                     if (element) {
                         element.textContent = text;
+                        picture.style.backgroundImage = "url('./public/img/crl+.svg')";
                     } else {
                         console.error('Element with id "log_result" not found');
                     }
@@ -95,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let summ = 0;
             valueArr.map((item) => summ += item);
             console.log(summ);
-            document.getElementById('summ').textContent = summ
+            document.getElementById('summ').textContent = 'от: ' + summ + ' ₽';
         })
     })
 
@@ -112,13 +122,13 @@ document.addEventListener('DOMContentLoaded', () => {
             let summ = 0;
             valueArr.map((item) => summ += item);
             console.log(summ);
-            document.getElementById('summ').textContent = summ
+            document.getElementById('summ').textContent = 'от: ' + summ + ' ₽';
         })
     })
     let summ = 0;
     valueArr.map((item) => summ += item);
     console.log(summ);
-    document.getElementById('summ').textContent = summ
+    document.getElementById('summ').textContent = 'от: ' + summ + ' ₽';
 
     //Код для выпадающего меню
     const pluses = Array.from(document.querySelectorAll('.plus_image'))
