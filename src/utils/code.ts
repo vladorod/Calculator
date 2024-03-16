@@ -1,19 +1,3 @@
-import create from "zustand";
-
-const store = create(set => ({
-    roof: { isMenuOpen: false, currentValue: null },
-    square: { isMenuOpen: false, currentValue: null },
-    sceleton: { isMenuOpen: false, currentValue: null },
-    foundation: { isMenuOpen: false, currentValue: null },
-    log: { isMenuOpen: false, currentValue: null },
-    openRoof: (value: boolean, radio: string) => {
-        set(state => ({ roof: { ...state.roof, isMenuOpen: value, currentValue: radio } }))
-    }
-}))
-store.subscribe((state) => {
-    console.log(state);
-}, (state) => state.roof)
-
 
 document.addEventListener('DOMContentLoaded', () => {
 
