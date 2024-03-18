@@ -8,31 +8,35 @@
   </head>
   <body>
     <div class="wrapper">
-      <p class="title">Рассчитать стоимость</p>
+      
       <div class="form_wrapper">
         <div class="image_wrapper">
+          <p class="title">Рассчитать стоимость</p>
           <div class="house_image">
             <div class="plus_image_square_wrapper">
-            <button data-menu="sqare" class="plus_image_square plus_image"></button>
-            <ul data-target="sqare" class="dropdown_menu">
+            <button data-menu="square" class="plus_image_square plus_image"></button>
+            <ul data-target="square" class="dropdown_menu" id="radio_menu_square">
+              <div class="menu_wrapper">
               <p class="dropdown_menu_title">Площадь</p>
               <div>
-                <input id="radio_sqare_opt1" type="radio" name="radio_menu_sqare" value="1">
-                <label for="radio_sqare_opt1">50-200м<sup>2</sup><span></span></label>
+                <input id="radio_square_opt1" type="radio" name="radio_menu_square" value="1">
+                <label for="radio_square_opt1">50-200м<sup>2</sup><span></span></label>
               </div>
               <div>
-                <input id="radio_sqare_opt2" type="radio" name="radio_menu_sqare" value="2">
-                <label for="radio_sqare_opt2">200-400м<sup>2</sup><span></span></label>
+                <input id="radio_square_opt2" type="radio" name="radio_menu_square" value="2">
+                <label for="radio_square_opt2">200-400м<sup>2</sup><span></span></label>
               </div>
               <div>
-                <input id="radio_sqare_opt3" type="radio" name="radio_menu_sqare" value="3">
-                <label for="radio_sqare_opt3">400-600м<sup>2</sup><span></span></label>
+                <input id="radio_square_opt3" type="radio" name="radio_menu_square" value="3">
+                <label for="radio_square_opt3">400-600м<sup>2</sup><span></span></label>
               </div>
+            </div>
             </ul>
             </div>
             <div class="plus_image_roof_wrapper">
             <button data-menu="roof" class="plus_image_roof plus_image"></button>
-            <ul data-target="roof" class="dropdown_menu">
+            <ul data-target="roof" class="dropdown_menu" id="radio_menu_roof">
+              <div class="menu_wrapper">
               <p class="dropdown_menu_title">Крыша</p>
               <div>
                 <input id="radio_roof_opt1" type="radio" name="radio_menu_roof" value="1">
@@ -46,11 +50,13 @@
                 <input id="radio_roof_opt3" type="radio" name="radio_menu_roof" value="3">
                 <label for="radio_roof_opt3">Шифер</label>
               </div>
+            </div>
             </ul>
             </div>
             <div class="plus_image_sceleton_wrapper">
             <button data-menu="sceleton" class="plus_image_sceleton plus_image"></button>
-            <ul data-target="sceleton" class="dropdown_menu">
+            <ul data-target="sceleton" class="dropdown_menu" id="radio_menu_sceleton">
+              <div class="menu_wrapper">
               <p class="dropdown_menu_title">Каркас</p>
               <div>
                 <input id="radio_sceleton_opt1" type="radio" name="radio_menu_sceleton" value="1">
@@ -64,6 +70,7 @@
                 <input id="radio_sceleton_opt3" type="radio" name="radio_menu_sceleton" value="3">
                 <label for="radio_sceleton_opt3">Опция 3</label>
               </div>
+            </div>
             </ul>
             </div>
             <div class="plus_image_foundation_wrapper">
@@ -71,7 +78,8 @@
               data-menu="foundation"
               class="plus_image_foundation plus_image"
             ></button>
-            <ul data-target="foundation" class="dropdown_menu">
+            <ul data-target="foundation" class="dropdown_menu" id="radio_menu_foundation">
+              <div class="menu_wrapper">
               <p class="dropdown_menu_title">Фундамент</p>
               <div>
                 <input id="radio_foundation_opt1" type="radio" name="radio_menu_foundation" value="1">
@@ -85,11 +93,13 @@
                 <input id="radio_foundation_opt3" type="radio" name="radio_menu_foundation" value="3">
                 <label for="radio_foundation_opt3">Опция 3</label>
               </div>
+            </div>
             </ul>
             </div>
             <div class="plus_image_log_wrapper">
             <button data-menu="log" class="plus_image_log plus_image"></button>
-            <ul data-target="log" class="dropdown_menu">
+            <ul data-target="log" class="dropdown_menu" id="radio_menu_log">
+              <div class="menu_wrapper">
               <p class="dropdown_menu_title">Диаметр бревна</p>
               <div>
               <input id="radio_log_opt1" type="radio" name="radio_menu_log" value="1">
@@ -103,6 +113,7 @@
               <input id="radio_log_opt3" type="radio" name="radio_menu_log" value="3">
               <label for="radio_log_opt3">Опция 3</label>
             </div>
+          </div>
             </ul>
             </div>
         </div>
@@ -123,11 +134,12 @@
             </div>
           </div>
           <div style="border-bottom: dashed 2px" class="sheet_form">
-            <p class="sheet_string">Площадь: <a id="sqare_result"></a></p>
+            <p class="sheet_string">Площадь: <a id="square_result"></a></p>
             <p class="sheet_string">Фундамент: <a id="foundation_result"></a></p>
             <p class="sheet_string">Каркас: <a id="sceleton_result"></a></p>
             <p class="sheet_string">Крыша: <a id="roof_result"></a></p>
-            <p class="sheet_string">Диаметр бревна:<a id="log_result"></a></p>
+            <p class="sheet_string">Диаметр бревна: <a id="log_result"></a></p>
+            <p></p>
           </div>
           <div class="total_form">
             <p class="total">Итого: </p><a id="summ"></a>

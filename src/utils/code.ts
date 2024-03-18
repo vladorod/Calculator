@@ -17,118 +17,67 @@ store.subscribe((state) => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const radios = Array.from(document.querySelectorAll('.dropdown_menu'))
-    let valueArr = new Array(6);
-    valueArr[5] = 2;
-    radios.forEach(radio => {
-        radio.addEventListener('click', e => {
-            if (e) {
-                if (document.querySelector('input[name="radio_menu_sqare"]:checked')) {
-                    const data = document.querySelector('input[name="radio_menu_sqare"]:checked').id
-                    const text = document.querySelector(`label[for="${data}"]`).innerText
-                    const value = Number(document.querySelector(`input[id="${data}"]`).value)
-                    const element = document.getElementById('sqare_result');
-                    const picture = document.querySelector('.plus_image_square');
-                    valueArr[0] = value;
-                    if (element) {
-                        element.textContent = text;
-                        picture.style.backgroundImage = "url('./public/img/crl+.svg')";
-                    } else {
-                        console.error('Element with id "sqare_result" not found');
-                    }
-                }
-            }
-            if (e) {
-                if (document.querySelector('input[name="radio_menu_roof"]:checked')) {
-                    const data = document.querySelector('input[name="radio_menu_roof"]:checked').id
-                    const text = document.querySelector(`label[for="${data}"]`).innerText
-                    const value = Number(document.querySelector(`input[id="${data}"]`).value)
-                    const element = document.getElementById('roof_result');
-                    const picture = document.querySelector('.plus_image_roof');
-                    valueArr[1] = value;
-                    if (element) {
-                        element.textContent = text;
-                        picture.style.backgroundImage = "url('./public/img/crl+.svg')";
-                    } else {
-                        console.error('Element with id "roof_result" not found');
-                    }
-                }
-            }
-            if (e) {
-                if (document.querySelector('input[name="radio_menu_sceleton"]:checked')) {
-                    const data = document.querySelector('input[name="radio_menu_sceleton"]:checked').id
-                    const text = document.querySelector(`label[for="${data}"]`).innerText
-                    const value = Number(document.querySelector(`input[id="${data}"]`).value)
-                    const element = document.getElementById('sceleton_result');
-                    const picture = document.querySelector('.plus_image_sceleton');
-                    valueArr[2] = value;
-                    if (element) {
-                        element.textContent = text;
-                        picture.style.backgroundImage = "url('./public/img/crl+.svg')";
-                    } else {
-                        console.error('Element with id "sceleton_result" not found');
-                    }
-                }
-            }
-            if (e) {
-                if (document.querySelector('input[name="radio_menu_foundation"]:checked')) {
-                    const data = document.querySelector('input[name="radio_menu_foundation"]:checked').id
-                    const text = document.querySelector(`label[for="${data}"]`).innerText
-                    const value = Number(document.querySelector(`input[id="${data}"]`).value)
-                    const element = document.getElementById('foundation_result');
-                    const picture = document.querySelector('.plus_image_foundation');
-                    valueArr[3] = value;
-                    if (element) {
-                        element.textContent = text;
-                        picture.style.backgroundImage = "url('./public/img/crl+.svg')";
-                    } else {
-                        console.error('Element with id "foundation_result" not found');
-                    }
-                }
-            }
-            if (e) {
-                if (document.querySelector('input[name="radio_menu_log"]:checked')) {
-                    const data = document.querySelector('input[name="radio_menu_log"]:checked').id
-                    const text = document.querySelector(`label[for="${data}"]`).innerText
-                    const value = Number(document.querySelector(`input[id="${data}"]`).value)
-                    const element = document.getElementById('log_result');
-                    const picture = document.querySelector('.plus_image_log');
-                    valueArr[4] = value;
-                    if (element) {
-                        element.textContent = text;
-                        picture.style.backgroundImage = "url('./public/img/crl+.svg')";
-                    } else {
-                        console.error('Element with id "log_result" not found');
-                    }
-                }
-            }
-            let summ = 0;
-            valueArr.map((item) => summ += item);
-            console.log(summ);
-            document.getElementById('summ').textContent = 'от: ' + summ + ' ₽';
-        })
-    })
+    const optionsValue = {
+        roof: 0,
+        square: 0,
+        sceleton: 0,
+        foundation: 0,
+        log: 0,
+        builds: Number(document.querySelector('input[id="house"]').value)
+    }
 
     const builds = Array.from(document.querySelectorAll('.calc_form_radio_btn'))
     builds.forEach(build => {
-        build.addEventListener('click', e => {
-            if (e) {
-                if (document.querySelector('input[name="radio_btn"]:checked')) {
-                    const data = document.querySelector('input[name="radio_btn"]:checked').id
-                    const value = Number(document.querySelector(`input[id="${data}"]`).value)
-                    valueArr[5] = value;
+        build.addEventListener('click', event => {
+            if (event) {
+                const checked = document.querySelector('input[name="radio_btn"]:checked')
+                if (checked) {
+                    const menuId = checked.id
+                    const value = Number(document.querySelector(`input[id="${menuId}"]`).value)
+                    optionsValue.builds = value;
                 }
             }
             let summ = 0;
-            valueArr.map((item) => summ += item);
-            console.log(summ);
+            for (let price of Object.values(optionsValue)) {
+                summ += price;
+            }
             document.getElementById('summ').textContent = 'от: ' + summ + ' ₽';
         })
     })
     let summ = 0;
-    valueArr.map((item) => summ += item);
-    console.log(summ);
+    for (let price of Object.values(optionsValue)) {
+        summ += price;
+    }
     document.getElementById('summ').textContent = 'от: ' + summ + ' ₽';
+
+    const radios = Array.from(document.querySelectorAll('.dropdown_menu'))
+    radios.forEach(radio => {
+        radio.addEventListener('click', event => {
+            if (event) {
+                const menuId = radio.id;
+                const checked = document.querySelector(`input[name="${menuId}"]:checked`);
+                if (checked) {
+                    const chekedId = checked.id;
+                    const text = document.querySelector(`label[for="${chekedId}"]`).innerText;
+                    const value = Number(document.querySelector(`input[id="${chekedId}"]`).value);
+                    const element = menuId.replace('radio_menu_', '');
+                    console.log(element);
+                    const result = document.getElementById(`${element}_result`);
+                    const picture = document.querySelector(`.plus_image_${element}`);
+                    optionsValue[element] = value;
+                    if (result) {
+                        result.textContent = ' ' + text;
+                        picture.style.backgroundImage = "url('./public/img/crl+.svg')";
+                    }
+                }
+                let summ = 0;
+                for (let price of Object.values(optionsValue)) {
+                    summ += price;
+                }
+                document.getElementById('summ').textContent = 'от: ' + summ + ' ₽';
+            }
+        })
+    })
 
     //Код для выпадающего меню
     const pluses = Array.from(document.querySelectorAll('.plus_image'))

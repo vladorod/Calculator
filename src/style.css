@@ -5,6 +5,7 @@ body {
 }
 a{
   font-weight:bold;
+  padding-left: 5px;
 }
 button {
   cursor: pointer;
@@ -29,7 +30,7 @@ button {
   width: 100%;
   display: inline-flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   gap: 101px;
 }
@@ -42,7 +43,7 @@ button {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-evenly;
 }
 .switcher {
   background-color: rgba(226, 212, 204, 1);
@@ -85,6 +86,9 @@ button {
   justify-content: flex-start;
 }
 .sheet_string {
+  width: 100%;
+  margin: 8px;
+  margin-left: 0;
   font-size: 16px;
   line-height: 100%;
   color: rgba(80, 80, 80, 1);
@@ -124,13 +128,13 @@ button {
   border: none;
 }
 .white_string {
+
   font-size: 14px;
   line-height: 100%;
   color: white;
 }
 .image_wrapper {
   width: 712px;
-  height: 469px;
 }
 .house_image {
   width: 712px;
@@ -163,8 +167,8 @@ button {
  	top: 100%;
 	left: 50%;
 	border-top-color: #fafafa;
-	border-width: 9px;
-	margin-left: -9px;
+	border-width: 6px;
+	margin-left: -6px;
   box-shadow: 0px 14px 24px rgba(51, 51, 51, 0.12);
 }
 .dropdown_menu input[type=radio]{
@@ -185,7 +189,6 @@ button {
   padding-right: 12px;
   background-color: #f9f6f4;
   margin: 0;
-  border-radius: 8px;
 }
 .dropdown_menu label{
   width: 100%;
@@ -199,10 +202,18 @@ button {
 .dropdown_menu label:hover{
   background-color: #f9f6f4;
 }
+.menu_wrapper{
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .dropdown_menu div {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  flex-direction: column;
 }
 li{
   list-style: none;
@@ -233,7 +244,6 @@ background-color: #f9f6f4;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .plus_image_roof_wrapper {
   left: 50%;
   top: 4%;
@@ -293,16 +303,7 @@ background-color: #f9f6f4;
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .form_wrapper {
-    flex-direction: column;
-    gap: 0px;
-  }
-  .calc_form_wrapper {
-    width: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .form_wrapper {
+    align-items: center;
     flex-direction: column;
     gap: 0px;
   }
@@ -310,8 +311,43 @@ background-color: #f9f6f4;
     width: auto;
   }
   .image_wrapper {
+    display: flex;
     width: 375px;
-    height: 250px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper{
+    align-items: center;
+  }
+  .form_wrapper {
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+  }
+  .calc_form_wrapper {
+    width: auto;
+  }
+  .title{
+    font-size: 24px; 
+    font-weight: 600; 
+    line-height: 110%; 
+    color: rgba(36, 36, 36, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .image_wrapper {
+    display: flex;
+    width: 375px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .house_image {
     width: 375px;
