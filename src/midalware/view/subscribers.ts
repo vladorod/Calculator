@@ -1,4 +1,4 @@
-import {store} from "../store/store.ts";
+import { store } from "../store/store.ts";
 
 export const initSubscribers = () => {
 
@@ -20,6 +20,15 @@ export const initSubscribers = () => {
 
     store.subscribe((state) => state.roof.isMenuOpen, (isMenuOpen) => {
         const menu_element = document.querySelector(`[data-target="roof"]`);
+        if (isMenuOpen) {
+            menu_element?.classList.add('menu_active');
+        } else {
+            menu_element?.classList.remove('menu_active');
+        }
+    })
+
+    store.subscribe((state) => state.square.isMenuOpen, (isMenuOpen) => {
+        const menu_element = document.querySelector('[data-target="square"]');
         if (isMenuOpen) {
             menu_element?.classList.add('menu_active');
         } else {

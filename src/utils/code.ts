@@ -119,7 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
     pluses.forEach(e => {
         e.addEventListener('click', e => {
             const openRoof = store.getState().openRoof
+            const openSquare = store.getState().openSquare
             openRoof(false);
+            openSquare(false);
             if (e) {
                 const menu = e.target.dataset.menu;
                 document.querySelectorAll('.dropdown_menu').forEach(e => {

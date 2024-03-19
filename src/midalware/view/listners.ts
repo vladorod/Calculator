@@ -1,4 +1,4 @@
-import {store} from "../store/store.ts";
+import { store } from "../store/store.ts";
 
 export const initListeners = () => {
     // Тут собственно то что ты делал раньше
@@ -7,5 +7,11 @@ export const initListeners = () => {
     roof?.addEventListener('click', () => {
         const { open, roof } = store.getState();
         open('roof', !roof.isMenuOpen);
+    });
+
+    const square = document.querySelector('plus_image_sqare')
+    square?.addEventListener('click', () => {
+        const { open, square } = store.getState();
+        open('square', !square.isMenuOpen);
     });
 }
