@@ -18,14 +18,46 @@ export const initSubscribers = () => {
         console.log(currentValue)
     })
 
-    // const states = store(state => Object.keys(state.states), shallow);
-    // console.log('states = ', states);
-    // store.subscribe((state) => state.roof.isMenuOpen, (isMenuOpen) => {
-    //     const menu_element = document.querySelector(`[data-target="roof"]`);
-    //     if (isMenuOpen) {
-    //         menu_element?.classList.add('menu_active');
-    //     } else {
-    //         menu_element?.classList.remove('menu_active');
-    //     }
-    // })
+    store.subscribe((state) => state.roof.isMenuOpen, (isMenuOpen) => {
+        const menu_element = document.querySelector(`[data-target="roof"]`);
+        if (isMenuOpen) {
+            menu_element?.classList.add('menu_active');
+        } else {
+            menu_element?.classList.remove('menu_active');
+        }
+    })
+
+    store.subscribe((state) => state.square.isMenuOpen, (isMenuOpen) => {
+        const menu_element = document.querySelector('[data-target="square"]');
+        if (isMenuOpen) {
+            menu_element?.classList.add('menu_active');
+        } else {
+            menu_element?.classList.remove('menu_active');
+        }
+    })
+    store.subscribe((state) => state.sceleton.isMenuOpen, (isMenuOpen) => {
+        const menu_element = document.querySelector(`[data-target="sceleton"]`);
+        if (isMenuOpen) {
+            menu_element?.classList.add('menu_active');
+        } else {
+            menu_element?.classList.remove('menu_active');
+        }
+    })
+
+    store.subscribe((state) => state.foundation.isMenuOpen, (isMenuOpen) => {
+        const menu_element = document.querySelector('[data-target="foundation"]');
+        if (isMenuOpen) {
+            menu_element?.classList.add('menu_active');
+        } else {
+            menu_element?.classList.remove('menu_active');
+        }
+    })
+    store.subscribe((state) => state.log.isMenuOpen, (isMenuOpen) => {
+        const menu_element = document.querySelector(`[data-target="log"]`);
+        if (isMenuOpen) {
+            menu_element?.classList.add('menu_active');
+        } else {
+            menu_element?.classList.remove('menu_active');
+        }
+    })
 }
