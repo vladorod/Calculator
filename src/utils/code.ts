@@ -81,12 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Код для выпадающего меню
     const pluses = Array.from(document.querySelectorAll('.plus_image'))
-    pluses.forEach(e => {
-        e.addEventListener('click', e => {
-            const openRoof = store.getState().openRoof
-            openRoof(false);
-            if (e) {
-                const menu = e.target.dataset.menu;
+    pluses.forEach(event => {
+        event.addEventListener('click', event => {
+            if (event) {
+                const menu = event.target.dataset.menu;
+                console.log(menu)
                 document.querySelectorAll('.dropdown_menu').forEach(e => {
                     const menu_element = document.querySelector(`[data-target=${menu}]`);
                     const button_element = document.querySelector(`[data-menu=${menu}]`);
@@ -98,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         menu_element.classList.remove('menu_active');
                     }
                     window.onclick = e => {
-                        if ((e.target != menu_element) && (e.target != button_element)) {
+                        if ((event.target != menu_element) && (event.target != button_element)) {
                             menu_element.classList.remove('menu_active');
                         }
                     }
