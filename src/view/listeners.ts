@@ -7,15 +7,9 @@ export const initListeners = () => {
     pluses.forEach(event => {
         event.addEventListener('click', event => {
             const menu = event.target.dataset.menu;
-            const { open, menuEl } = store.getState();
-            open(menu, !menuEl.isMenuOpen);
+            const { open, isOpen } = store.getState();
+            console.log(isOpen);
+            open(menu, !isOpen.isMenuOpen);
         })
-    });
-
-    const square = document.querySelector('.plus_image_square')
-    console.log(square);
-    square?.addEventListener('click', () => {
-        const { open, square } = store.getState();
-        open('square', !square.isMenuOpen);
     });
 }

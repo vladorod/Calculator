@@ -1,5 +1,4 @@
 import { store } from "../store/store.ts";
-import shallow from 'zustand/shallow'
 
 export const initSubscribers = () => {
 
@@ -19,14 +18,14 @@ export const initSubscribers = () => {
         console.log(currentValue)
     })
 
-    const states = store(state => Object.keys(state.states), shallow);
-    console.log('states = ', states);
-    store.subscribe((state) => state.roof.isMenuOpen, (isMenuOpen) => {
-        const menu_element = document.querySelector(`[data-target="roof"]`);
-        if (isMenuOpen) {
-            menu_element?.classList.add('menu_active');
-        } else {
-            menu_element?.classList.remove('menu_active');
-        }
-    })
+    // const states = store(state => Object.keys(state.states), shallow);
+    // console.log('states = ', states);
+    // store.subscribe((state) => state.roof.isMenuOpen, (isMenuOpen) => {
+    //     const menu_element = document.querySelector(`[data-target="roof"]`);
+    //     if (isMenuOpen) {
+    //         menu_element?.classList.add('menu_active');
+    //     } else {
+    //         menu_element?.classList.remove('menu_active');
+    //     }
+    // })
 }
