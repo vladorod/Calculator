@@ -18,46 +18,59 @@ export const initSubscribers = () => {
         console.log(currentValue)
     })
 
-    store.subscribe((state) => state.roof.isMenuOpen, (isMenuOpen) => {
-        const menu_element = document.querySelector(`[data-target="roof"]`);
-        if (isMenuOpen) {
-            menu_element?.classList.add('menu_active');
-        } else {
-            menu_element?.classList.remove('menu_active');
-        }
-    })
+    Object.keys(store.getState()).forEach(element => {
+        const _store = store.getState();
+        store.subscribe((state) => const _store = store.getState(); state._store[element].isMenuOpen, (isMenuOpen) => {
+            const menu_element = document.querySelector(`[data-target="${element}"]`);
+            if (isMenuOpen) {
+                menu_element?.classList.add('menu_active');
+            } else {
+                menu_element?.classList.remove('menu_active');
+            }
+        })
+    });
 
-    store.subscribe((state) => state.square.isMenuOpen, (isMenuOpen) => {
-        const menu_element = document.querySelector('[data-target="square"]');
-        if (isMenuOpen) {
-            menu_element?.classList.add('menu_active');
-        } else {
-            menu_element?.classList.remove('menu_active');
-        }
-    })
-    store.subscribe((state) => state.sceleton.isMenuOpen, (isMenuOpen) => {
-        const menu_element = document.querySelector(`[data-target="sceleton"]`);
-        if (isMenuOpen) {
-            menu_element?.classList.add('menu_active');
-        } else {
-            menu_element?.classList.remove('menu_active');
-        }
-    })
 
-    store.subscribe((state) => state.foundation.isMenuOpen, (isMenuOpen) => {
-        const menu_element = document.querySelector('[data-target="foundation"]');
-        if (isMenuOpen) {
-            menu_element?.classList.add('menu_active');
-        } else {
-            menu_element?.classList.remove('menu_active');
-        }
-    })
-    store.subscribe((state) => state.log.isMenuOpen, (isMenuOpen) => {
-        const menu_element = document.querySelector(`[data-target="log"]`);
-        if (isMenuOpen) {
-            menu_element?.classList.add('menu_active');
-        } else {
-            menu_element?.classList.remove('menu_active');
-        }
-    })
+    //     store.subscribe((state) => state.roof.isMenuOpen, (isMenuOpen) => {
+    //         const menu_element = document.querySelector(`[data-target="roof"]`);
+    //         if (isMenuOpen) {
+    //             menu_element?.classList.add('menu_active');
+    //         } else {
+    //             menu_element?.classList.remove('menu_active');
+    //         }
+    //     })
+
+    //     store.subscribe((state) => state.square.isMenuOpen, (isMenuOpen) => {
+    //         const menu_element = document.querySelector('[data-target="square"]');
+    //         if (isMenuOpen) {
+    //             menu_element?.classList.add('menu_active');
+    //         } else {
+    //             menu_element?.classList.remove('menu_active');
+    //         }
+    //     })
+    //     store.subscribe((state) => state.sceleton.isMenuOpen, (isMenuOpen) => {
+    //         const menu_element = document.querySelector(`[data-target="sceleton"]`);
+    //         if (isMenuOpen) {
+    //             menu_element?.classList.add('menu_active');
+    //         } else {
+    //             menu_element?.classList.remove('menu_active');
+    //         }
+    //     })
+
+    //     store.subscribe((state) => state.foundation.isMenuOpen, (isMenuOpen) => {
+    //         const menu_element = document.querySelector('[data-target="foundation"]');
+    //         if (isMenuOpen) {
+    //             menu_element?.classList.add('menu_active');
+    //         } else {
+    //             menu_element?.classList.remove('menu_active');
+    //         }
+    //     })
+    //     store.subscribe((state) => state.log.isMenuOpen, (isMenuOpen) => {
+    //         const menu_element = document.querySelector(`[data-target="log"]`);
+    //         if (isMenuOpen) {
+    //             menu_element?.classList.add('menu_active');
+    //         } else {
+    //             menu_element?.classList.remove('menu_active');
+    //         }
+    //     })
 }

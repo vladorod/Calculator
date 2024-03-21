@@ -7,10 +7,9 @@ export const initListeners = () => {
     pluses.forEach(event => {
         event.addEventListener('click', event => {
             const menu = event.target?.dataset.menu as PositionName;
-            const _store = store.getState()
+            const _store = store.getState();
             const { open } = store.getState();
             open(menu, !_store[menu].isMenuOpen);
-            console.log(_store[menu].isMenuOpen);
         })
     });
 }
