@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%;
-  font-family: "raleway", sans-serif;
+  font-family: "open sans", sans-serif;
 }
 a{
   font-weight:bold;
@@ -25,6 +25,7 @@ button {
   line-height: 110%;
   color: rgba(36, 36, 36, 1);
   margin-bottom: 70px;
+  font-family: "raleway", sans-serif;
 }
 .form_wrapper {
   width: 100%;
@@ -310,10 +311,10 @@ background-color: #f9f6f4;
   background-size: cover;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 426px) and (max-width: 1024px) {
   .form_wrapper {
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     gap: 0px;
   }
   .calc_form_wrapper {
@@ -326,9 +327,21 @@ background-color: #f9f6f4;
     justify-content: center;
     align-items: center;
   }
+  .house_image {
+    width: 375px;
+    height: 250px;
+  }
+  .plus_image {
+    width: 40px;
+    height: 40px;
+  }
+  .dropdown_menu{
+    bottom: 38px;
+    right: -215%;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .wrapper{
     align-items: center;
   }
