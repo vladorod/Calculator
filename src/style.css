@@ -30,14 +30,15 @@ button {
   width: 100%;
   display: inline-flex;
   flex-direction: row;
-  align-items: flex-end;
+  /* align-items: flex-end; */
+  align-items: center;
   justify-content: center;
   gap: 101px;
 }
 .calc_form_wrapper {
   z-index: 1;
   width: 387px;
-  height: 499px;
+  /* height: 499px; */
   background-color: rgba(248, 246, 245, 1);
   border-radius: 8px;
   display: inline-flex;
@@ -87,12 +88,12 @@ button {
 }
 .sheet_string {
   width: 100%;
-  margin: 8px;
+  margin: 16px;
   margin-left: 0;
   font-size: 16px;
   line-height: 100%;
   color: rgba(80, 80, 80, 1);
-  display: flex;
+  display: none;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
@@ -118,7 +119,7 @@ button {
 .send_button {
   width: 275px;
   height: 50px;
-  background-color: rgba(192, 161, 144, 1);
+  /* background-color: #E0DEDD; */
   border-radius: 8px;
   display: inline-flex;
   flex-direction: row;
@@ -126,7 +127,15 @@ button {
   justify-content: center;
   margin: 2%;
   border: none;
+  background-color: rgba(192, 161, 144, 1);
 }
+.send_button:disabled {
+background-color: #E0DEDD;
+}
+.send_button:disabled p {
+  color: #9A9A9A;
+}
+
 .white_string {
 
   font-size: 14px;
@@ -353,23 +362,7 @@ background-color: #f9f6f4;
     width: 375px;
     height: 250px;
   }
-  .plus_image_foundation {
-    width: 40px;
-    height: 40px;
-  }
-  .plus_image_log {
-    width: 40px;
-    height: 40px;
-  }
-  .plus_image_roof {
-    width: 40px;
-    height: 40px;
-  }
-  .plus_image_sceleton {
-    width: 40px;
-    height: 40px;
-  }
-  .plus_image_square {
+  .plus_image {
     width: 40px;
     height: 40px;
   }

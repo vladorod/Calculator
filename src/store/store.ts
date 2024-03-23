@@ -8,7 +8,7 @@ export const store = create(subscribeWithSelector<Store & Record<PositionName, P
     sceleton: { isMenuOpen: false, currentValue: '', currentPrice: null },
     foundation: { isMenuOpen: false, currentValue: '', currentPrice: null },
     log: { isMenuOpen: false, currentValue: '', currentPrice: null },
-    buildings: { currentPrice: (document.querySelector('input[id="house"]').value) },
+    buildings: { currentPrice: Number(document.querySelector('input[id="house"]').value) },
 
     open: (element, value) => {
         set(state => {
