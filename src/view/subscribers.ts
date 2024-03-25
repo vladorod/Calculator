@@ -3,7 +3,7 @@ import { store } from "../store/store.ts";
 export const initSubscribers = () => {
 
     const keys = Object.keys(store.getState())
-    //реакция для открытия меню
+    //реакция для открытия и закрытия меню
     keys.forEach(element => {
         store.subscribe((state) => state[element].isMenuOpen, (isMenuOpen) => {
             const menu_element = document.querySelector(`[data-target="${element}"]`);

@@ -1,0 +1,7 @@
+<svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="38" cy="38" r="32" fill="#887266"/>
+<circle cx="38" cy="38" r="35" stroke="#E5E5E5" stroke-opacity="0.6" stroke-width="6"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27 25C25.34 25 24 26.34 24 28V29C24 30.66 25.34 32 27 32H49C50.66 32 52 30.66 52 29V28C52 26.34 50.66 25 49 25H27ZM26 28C26 27.45 26.45 27 27 27H49C49.55 27 50 27.45 50 28V29C50 29.55 49.55 30 49 30H27C26.45 30 26 29.55 26 29V28Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27 34C25.34 34 24 35.34 24 37V38C24 39.66 25.34 41 27 41H49C50.66 41 52 39.66 52 38V37C52 35.34 50.66 34 49 34H27ZM26 37C26 36.45 26.45 36 27 36H49C49.55 36 50 36.45 50 37V38C50 38.55 49.55 39 49 39H27C26.45 39 26 38.55 26 38V37Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27 43C25.34 43 24 44.34 24 46V47C24 48.66 25.34 50 27 50H49C50.66 50 52 48.66 52 47V46C52 44.34 50.66 43 49 43H27ZM26 46C26 45.45 26.45 45 27 45H49C49.55 45 50 45.45 50 46V47C50 47.55 49.55 48 49 48H27C26.45 48 26 47.55 26 47V46Z" fill="white"/>
+</svg>

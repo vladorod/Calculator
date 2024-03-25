@@ -38,5 +38,14 @@ export const store = create(subscribeWithSelector<Store & Record<PositionName, P
             state.buildings.currentPrice = price;
             return { ...state }
         })
+    },
+    closeAll: () => {
+        set(state => {
+            Object.keys(state).forEach(element => {
+                const currentElement = state[element];
+                currentElement.isMenuOpen = false;
+            })
+            return { ...state }
+        })
     }
 })))

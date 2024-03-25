@@ -247,7 +247,7 @@ background-color: #f9f6f4;
   height: 64px;
   border-radius: 999px;
   border: none;
-  background-image: url(./img/crl.svg);
+  background-image: url(./img/square.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -261,13 +261,13 @@ background-color: #f9f6f4;
   height: 64px;
   border-radius: 999px;
   border: none;
-  background-image: url(./img/crl.svg);
+  background-image: url(./img/roof.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .plus_image_sceleton_wrapper {
-  left: 67%;
-  top: 50%;
+  left: 15%;
+  top: 61%;
   position: absolute;
 }
 .plus_image_sceleton {
@@ -275,7 +275,7 @@ background-color: #f9f6f4;
   height: 64px;
   border-radius: 999px;
   border: none;
-  background-image: url(./img/crl.svg);
+  background-image: url(./img/sceleton.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -289,13 +289,13 @@ background-color: #f9f6f4;
   height: 64px;
   border-radius: 999px;
   border: none;
-  background-image: url(./img/crl.svg);
+  background-image: url(./img/foundation.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .plus_image_log_wrapper {
-  left: 15%;
-  top: 61%;
+  left: 67%;
+  top: 50%;
   position: absolute;
 }
 .plus_image_log {
@@ -303,7 +303,7 @@ background-color: #f9f6f4;
   height: 64px;
   border-radius: 999px;
   border: none;
-  background-image: url(./img/crl.svg);
+  background-image: url(./img/log.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }

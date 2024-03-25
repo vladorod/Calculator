@@ -8,24 +8,31 @@ export const initListeners = () => {
     pluses.forEach(event => {
         event.addEventListener('click', event => {
             const menu = event.target?.dataset.menu as PositionName;
+            const { closeAll, open } = store.getState();
             const _store = store.getState();
-            const { open } = store.getState();
+            closeAll();
             open(menu, !_store[menu].isMenuOpen);
         })
     });
 
     //закрытие меню, при клике вне него
-    const openMenu = Array.from(document.querySelectorAll('.dropdown_menu'));
-    const plusImg = Array.from(document.querySelectorAll('.plus_image'));
-    window.onclick = event => {
+    document.addEventListener('click', event => {
         const target = event.target;
-        if ((plusImg != target) && (openMenu != target)) {
-            Object.keys(store.getState()).forEach(element => {
-                const state = store.getState();
-                state[element].isMenuOpen = false;
-            });
+        const openMenu = Array.from(document.querySelectorAll('.menu_wrapper')).find((value) => {
+            if (value === target.parentElement.parentElement) {
+                return true;
+            }
+        });
+        const plusImg = Array.from(document.querySelectorAll('.plus_image')).find((value) => {
+            if (value === target) {
+                return true;
+            }
+        });
+        if (!plusImg && !openMenu) {
+            const { closeAll } = store.getState();
+            closeAll();
         };
-    };
+    });
 
     //выбор опций в меню
     const radios = Array.from(document.querySelectorAll('.dropdown_menu'))

@@ -11,7 +11,8 @@ export interface Store {
     open: (element: PositionName, value: boolean) => void,
     valuePrice: (element: PositionName, value: string, price: number) => void,
     calc: () => void,
-    buildPrice: (price: Number) => void
+    buildPrice: (price: Number) => void,
+    closeAll: () => void
 }
 
 export type PositionName = 'roof' | 'square' | 'foundation' | 'log' | 'sceleton';
