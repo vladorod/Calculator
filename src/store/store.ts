@@ -8,7 +8,7 @@ export const store = create(subscribeWithSelector<Store & Record<PositionName, P
     sceleton: { isMenuOpen: false, currentValue: '', currentPrice: null },
     foundation: { isMenuOpen: false, currentValue: '', currentPrice: null },
     log: { isMenuOpen: false, currentValue: '', currentPrice: null },
-    buildings: { currentPrice: Number(document.querySelector('input[id="house"]').value) },
+    buildings: { currentPrice: +document.querySelector('input[id="house"]').value },
 
     open: (element, value) => {
         set(state => {
@@ -25,4 +25,18 @@ export const store = create(subscribeWithSelector<Store & Record<PositionName, P
             return { ...state }
         })
     },
+    calc: () => {
+        const _store = store.getState();
+        let summ = 0;
+        if (_store.roof.currentPrice && _store.square.currentPrice && _store.sceleton.currentPrice && _store.foundation.currentPrice && _store.log.currentPrice) {
+            summ = _store.roof.currentPrice + _store.square.currentPrice + _store.sceleton.currentPrice + _store.foundation.currentPrice + _store.log.currentPrice + _store.buildings.currentPrice;
+        }
+        return (summ);
+    },
+    buildPrice: (price) => {
+        set(state => {
+            state.buildings.currentPrice = price;
+            return { ...state }
+        })
+    }
 })))

@@ -15,19 +15,6 @@ export const initSubscribers = () => {
         })
     });
 
-    //закрытие меню, при клике вне него
-    const openMenu = Array.from(document.querySelectorAll('.dropdown_menu'));
-    const plusImg = Array.from(document.querySelectorAll('.plus_image'));
-    window.onclick = event => {
-        const target = event.target;
-        if ((plusImg != target) && (openMenu != target)) {
-            keys.forEach(element => {
-                const state = store.getState();
-                state[element].isMenuOpen = false;
-            });
-        };
-    };
-
     //реакция для передачи текста опции и изменения плюса на галочку
     keys.forEach(element => {
         store.subscribe((state) => state[element].currentValue, (currentValue) => {

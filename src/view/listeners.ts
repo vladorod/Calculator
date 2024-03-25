@@ -1,4 +1,4 @@
-import { PositionName } from "../store/interfaces.ts";
+import { ETabValue, PositionName } from "../store/interfaces.ts";
 import { store } from "../store/store.ts";
 
 export const initListeners = () => {
@@ -13,6 +13,19 @@ export const initListeners = () => {
             open(menu, !_store[menu].isMenuOpen);
         })
     });
+
+    //закрытие меню, при клике вне него
+    const openMenu = Array.from(document.querySelectorAll('.dropdown_menu'));
+    const plusImg = Array.from(document.querySelectorAll('.plus_image'));
+    window.onclick = event => {
+        const target = event.target;
+        if ((plusImg != target) && (openMenu != target)) {
+            Object.keys(store.getState()).forEach(element => {
+                const state = store.getState();
+                state[element].isMenuOpen = false;
+            });
+        };
+    };
 
     //выбор опций в меню
     const radios = Array.from(document.querySelectorAll('.dropdown_menu'))
@@ -37,10 +50,11 @@ export const initListeners = () => {
         build.addEventListener('click', () => {
             const checked = document.querySelector('input[name="radio_btn"]:checked')
             if (checked) {
-                const menuId = checked.id
+                const { buildPrice } = store.getState();
+                const menuId = checked.id as unknown as ETabValue;
                 const value = Number(document.querySelector(`input[id="${menuId}"]`).value)
-                const { buildings } = store.getState();
-                buildings.currentPrice = value;
+                buildPrice(value);
+                // buildings.currentPrice = value;
             };
         });
     });

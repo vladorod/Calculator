@@ -31,7 +31,6 @@ button {
   width: 100%;
   display: inline-flex;
   flex-direction: row;
-  /* align-items: flex-end; */
   align-items: center;
   justify-content: center;
   gap: 101px;
@@ -39,7 +38,6 @@ button {
 .calc_form_wrapper {
   z-index: 1;
   width: 387px;
-  /* height: 499px; */
   background-color: rgba(248, 246, 245, 1);
   border-radius: 8px;
   display: inline-flex;
@@ -55,6 +53,7 @@ button {
   align-items: flex-start;
   justify-content: flex-start;
   margin: 2%;
+  margin-bottom: 16px;
 }
 .calc_form_radio_btn {
 	display: inline-block;
@@ -89,7 +88,6 @@ button {
 }
 .sheet_string {
   width: 100%;
-  margin: 16px;
   margin-left: 0;
   font-size: 16px;
   line-height: 100%;
@@ -120,7 +118,6 @@ button {
 .send_button {
   width: 275px;
   height: 50px;
-  /* background-color: #E0DEDD; */
   border-radius: 8px;
   display: inline-flex;
   flex-direction: row;
@@ -311,7 +308,7 @@ background-color: #f9f6f4;
   background-size: cover;
 }
 
-@media (min-width: 426px) and (max-width: 1024px) {
+@media (min-width: 608px) and (max-width: 1024px) {
   .form_wrapper {
     align-items: center;
     flex-direction: row;
@@ -341,9 +338,9 @@ background-color: #f9f6f4;
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 608px) {
   .wrapper{
-    align-items: center;
+    align-items: flex-end;;
   }
   .form_wrapper {
     flex-direction: column;
