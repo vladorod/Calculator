@@ -31,7 +31,7 @@ button {
   width: 100%;
   display: inline-flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   gap: 101px;
 }
@@ -53,7 +53,8 @@ button {
   align-items: flex-start;
   justify-content: flex-start;
   margin: 2%;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 .calc_form_radio_btn {
 	display: inline-block;
@@ -88,16 +89,17 @@ button {
 }
 .sheet_string {
   width: 100%;
-  margin-left: 0;
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 16px;
   line-height: 100%;
   color: rgba(80, 80, 80, 1);
-  display: none;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
 }
 .total_form {
+  margin: 30px 0;
   width:70%;
   display: inline-flex;
   flex-direction: row;
@@ -105,11 +107,12 @@ button {
   justify-content: space-between;
 }
 .total {
+  margin: 0;
   font-size: 16px;
   line-height: 100%;
   color: rgba(80, 80, 80, 1);
 }
-.summ {
+#summ {
   font-size: 20px;
   line-height: 100%;
   text-align: right;
@@ -126,6 +129,7 @@ button {
   margin: 2%;
   border: none;
   background-color: rgba(192, 161, 144, 1);
+  margin-bottom: 40px;
 }
 .send_button:disabled {
 background-color: #E0DEDD;
