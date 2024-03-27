@@ -46,26 +46,24 @@ button {
   justify-content: space-evenly;
 }
 .switcher {
+  width: 85%;
   background-color: rgba(226, 212, 204, 1);
   border-radius: 8px;
   display: inline-flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  margin: 2%;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  margin: 30px;
 }
 .calc_form_radio_btn {
 	display: inline-block;
+  width: 33.33%;
 }
 .calc_form_radio_btn input[type=radio] {
 	display: none;
 }
 .calc_form_radio_btn label {
   height: 50px;
-  padding-left: 30px;
-  padding-right: 30px;
   border-radius: 8px;
   display: flex;
   flex-direction: row;
@@ -81,7 +79,7 @@ button {
 	background: rgba(226, 212, 204, 1);
 }
 .sheet_form {
-  width:70%;
+  width:85%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -100,7 +98,7 @@ button {
 }
 .total_form {
   margin: 30px 0;
-  width:70%;
+  width:85%;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
@@ -119,17 +117,16 @@ button {
   color: rgba(80, 80, 80, 1);
 }
 .send_button {
-  width: 275px;
+  width: 85%;
   height: 50px;
   border-radius: 8px;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 2%;
   border: none;
   background-color: rgba(192, 161, 144, 1);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .send_button:disabled {
 background-color: #E0DEDD;
@@ -313,14 +310,17 @@ background-color: #f9f6f4;
   background-size: cover;
 }
 
-@media (min-width: 608px) and (max-width: 1024px) {
+@media (min-width: 667px) and (max-width: 1100px) {
+  .title{
+    margin-bottom: 55px;
+  }
   .form_wrapper {
     align-items: center;
     flex-direction: row;
-    gap: 40px;
+    gap: 5%;
   }
   .calc_form_wrapper {
-    width: auto;
+    width: 335px;
   }
   .image_wrapper {
     display: flex;
@@ -343,21 +343,17 @@ background-color: #f9f6f4;
     width: 160px;
   }
   .switcher{
-    margin-bottom: 29px;
-    margin-top: 17px;
+    margin: 20px;
   }
   .sheet_string{
-    margin-bottom: 14px;
+    margin-bottom: 20px;
     font-size: 14px;
   }  
-  #sheet_string_log{
-    margin-bottom: 25px;
-  }
   .send_button{
-    margin-bottom: 34px;
+    margin-bottom: 20px;
   }
   .total_form {
-    margin: 25px 0;
+    margin: 20px 0;
   }
   #summ {
     font-size: 16px;
@@ -385,17 +381,17 @@ background-color: #f9f6f4;
   }
 }
 
-@media (max-width: 608px) {
+@media (max-width: 666px) {
   .wrapper{
     align-items: flex-end;;
   }
   .form_wrapper {
     flex-direction: column;
-    gap: 0px;
+    gap: 5%;
     align-items: center;
   }
   .calc_form_wrapper {
-    width: auto;
+    width: 310px;
   }
   .title{
     font-size: 24px; 
@@ -410,14 +406,14 @@ background-color: #f9f6f4;
   }
   .image_wrapper {
     display: flex;
-    width: 375px;
+    width: 320px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   .house_image {
-    width: 375px;
-    height: 250px;
+    width: 320px;
+    height: 213px;
   }
   .plus_image {
     width: 40px;
@@ -429,21 +425,17 @@ background-color: #f9f6f4;
     right: -150%;
   }
   .switcher{
-    margin-bottom: 29px;
-    margin-top: 17px;
+    margin: 20px 0;
   }
   .sheet_string{
-    margin-bottom: 14px;
+    margin-bottom: 20px;
     font-size: 14px;
   }  
-  #sheet_string_log{
-    margin-bottom: 25px;
-  }
   .send_button{
-    margin-bottom: 34px;
+    margin-bottom: 20px;
   }
   .total_form {
-    margin: 25px 0;
+    margin: 20px 0;
   }
   #summ {
     font-size: 16px;
@@ -468,8 +460,5 @@ background-color: #f9f6f4;
   }
   .plus_image_roof_wrapper {
     top: 14%;
-  }
-  .dropdown_menu {
-    width: 160px;
   }
 }

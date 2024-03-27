@@ -18,17 +18,17 @@ export const initListeners = () => {
     //закрытие меню, при клике вне него
     document.addEventListener('click', event => {
         const target = event.target;
-        const openMenu = Array.from(document.querySelectorAll('.menu_wrapper')).find((value) => {
-            if (value === target.parentElement.parentElement) {
-                return true;
-            }
-        });
+        // const openMenu = Array.from(document.querySelectorAll('.menu_wrapper')).find((value) => {
+        //     if (value === target.parentElement.parentElement) {
+        //         return true;
+        //     }
+        // });
         const plusImg = Array.from(document.querySelectorAll('.plus_image')).find((value) => {
             if (value === target) {
                 return true;
             }
         });
-        if (!plusImg && !openMenu) {
+        if (!plusImg) {
             const { closeAll } = store.getState();
             closeAll();
         };
